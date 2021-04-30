@@ -4,7 +4,7 @@ const cTable = require("console.table");
 
 const connection = mysql.createConnection({
     host: 'localhost',
-    port: 3000,
+    port: 3306,
     user: 'root',
     password: 'yourRootPassword',
     database: 'employee_DB'
@@ -18,8 +18,8 @@ connection.connect(function(err) {
 
 const runPrompt = () => {
     inquirer.prompt ({
-        type: list,
-        name: userChoices,
+        type: "list",
+        name: "userChoices",
         message: 'What would you like to do?',
         choices: [
             "Add Department",
@@ -32,7 +32,7 @@ const runPrompt = () => {
         ],
     })
     .then((answer) => {
-        switch(anser.action) {
+        switch(answer.action) {
             case 'Add Department':
                 addDepartment();
                 break;
@@ -61,9 +61,9 @@ const runPrompt = () => {
                 updateEmployee();
                 break;
 
-            default:
-                console.log (`Invalid action: ${answer.action}`);
-                break;
+            // default:
+            //     console.log (`Invalid action: ${answer.action}`);
+            //     break;
         }
     });
 };
