@@ -6,3 +6,7 @@ This employee tracker allows the user to manage their employess, the roles, of t
 
 ## Installation
 To install this application and use the command-line, install  npm, inquirer, console.table, and mysql. After that, the user needs to run npm start and follow the prompts.
+
+![](assets/newgif3.gif)
+![](assets/newgif4.gif)
+![](assets/newgif5.gif)
